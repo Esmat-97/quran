@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Input } from '@angular/core';
 @Component({
   selector: 'app-child',
   standalone: true,
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './child.component.css'
 })
 export class ChildComponent {
-
-}
+@Input() item:any
+} 
