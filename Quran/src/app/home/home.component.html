@@ -1,11 +1,18 @@
 
-<div class="card text-bg-primary mb-3" style="width: 600px; margin-left: 250px;" *ngFor="let x of data" id="a">
-   
-    <div class="card-header">{{x.name}}</div>
-    <div class="card-body">
-      <p class="card-text" *ngFor="let y of x.verses ">{{y.text}}</p>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+
+@for( x of data ; track data.id ){
+    <div class="col">
+      <div class="card h-100  bg-secondary text-white">
+        <div class="card-body">
+          <h5 class="card-title">{{x.name}}</h5>
+          <p class="card-text">{{x.total_verses}}</p>
+          <p class="card-text">{{x.type}}</p>
+          <p class="card-text">{{x.transliteration}}</p>
+        </div>
+      </div>
     </div>
-
+  }
   </div>
-
-  
+   
