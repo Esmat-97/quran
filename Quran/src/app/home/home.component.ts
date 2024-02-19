@@ -20,7 +20,7 @@ export class HomeComponent {
   this.fetchData()
   }
   fetchData(){
-    this.httpCliet.get('https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/quran.json')
+    this.httpCliet.get('https://raw.githubusercontent.com/nawafalqari/ayah/main/src/data/quran.json')
     .subscribe((data:any)=>{
       console.log(data[0])
       this.data=data;
