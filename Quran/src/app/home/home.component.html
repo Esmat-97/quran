@@ -1,0 +1,11 @@
+
+<div class="card text-bg-primary mb-3" style="width: 600px; margin-left: 250px;" *ngFor="let x of data" id="a">
+   
+    <div class="card-header">{{x.name}}</div>
+    <div class="card-body">
+      <p class="card-text" *ngFor="let y of x.verses ">{{y.text}}</p>
+    </div>
+
+  </div>
+
+  
