@@ -10,4 +10,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Quran';
+  
+  ShowMessage(msg:string):string{
+return msg;
+  }
 }
