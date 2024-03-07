@@ -1,7 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { Component } from '@angular/core';
-import { Addition } from './Calculator';
+import { Addition } from './Calculator';    
+import { MarkPipe } from './pipes/mark.pipe';
 
 
 describe('AppComponent', () => {
@@ -15,15 +16,25 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  
+  /* */
 
 
-  it('My testcase',()=>{
-    expect(true).toBe(true);
+  it('create instance from pipe',()=>{
+    const pipe =new MarkPipe();
+    expect(pipe).toBeTruthy();
       });
 
 
+      it('show if the value one',()=>{
+        const pipe =new MarkPipe();
+        expect(pipe.transform(1)).toEqual('the first jozz');
+          });
+    
 
+
+      it('My testcase',()=>{
+        expect(true).toBe(true);
+          });
 
 
 
